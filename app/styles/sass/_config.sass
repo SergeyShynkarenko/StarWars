@@ -1,0 +1,116 @@
+// USER VARIABLES SECTION
+
+$accent: #FB7363 // Accent Color
+$fontsize: 14px // Body Font Size
+$textcolor: #222222 // Text Color
+$weight: 400 //Font Weight
+$bgcolor: #E1E7EC // Background Color
+$grey: #BDC2C7 //Grey Text
+$white: #fff //White Color
+$mancolor: #3eb8d3
+$bordercolor: #F3F7FA //Border Color
+$womancolor: #d65eb4
+$lineheight: 1.36 // Document Line Height
+$userfont: nunito, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('nunito', normal, 400, '../fonts/Nunito-Regular.woff2')
+@include font('nunito', normal, 600, '../fonts/Nunito-SemiBold.woff2')
+
+@mixin reset
+		margin: 0
+		padding: 0
+		list-style: none
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #fff
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	font-weight: $weight
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	background-color: $bgcolor
+
+.container
+	max-width: 1177px
+	width: 100%
+	padding: 0 15px
+	margin: 0 auto
+
+ul
+	@include reset
+	li
+		outline: none
+
+
+a
+	color: $accent
+	transition: all .3s ease
+	outline: none
+	&:hover 
+		text-decoration: none
+		color: $grey
+
+img 
+	max-width: 100%
+
+.btn
+	width: 120px
+	padding: 10px 30px
+	text-align: center
+	color: $white
+	background-color: $accent
+	text-transform: uppercase
+	border-radius: 100px
+	font-size: 12px
+	line-height: 1.36
+	font-weight: 600
+	border: none
+	transition: all .3s ease
+	outline: none
+	@media(max-width: 768px)
+		width: 90px
+		padding: 7px 30px
+
+	&.disabled
+		opacity: .5
+		&:hover
+			opacity: 1

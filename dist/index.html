@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Star Wars</title>
+	<meta name="description" content="Star Wars">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">
+
+	<script src="https://kit.fontawesome.com/4cc020064a.js" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<a class="header__logo" href="#">
+				<img class="header__logo-img" src="images/dist/logo.svg" alt="Star Wars">
+			</a>
+		</div>
+	</header>
+
+<div class="breadcrumbs">
+	<div class="container">
+		<ul class="breadcrumbs__list">
+			<li class="breadcrumbs__list-item">
+				<a href="" class="breadcrumbs__list-link">Star Wars</a>
+			</li>
+			<li class="breadcrumbs__list-item">
+				<a href="" class="breadcrumbs__list-link">Database</a>
+			</li>
+			<li class="breadcrumbs__list-item">
+				<a href="" class="breadcrumbs__list-link active-link">Peoples</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<section class="cards">
+	<div class="container">
+		<div class="cards__inner">
+
+			<div class="cards__aside">
+				<div class="aside__title">
+					<span>Filters<span>
+					<i class="arrow fas fa-chevron-up"></i>
+				</div>
+
+				<form class="aside__form">
+					<ul class="form__list">
+
+						<li class="form__list-item">
+							<p class="item__title">Gender:</p>
+
+							<input class="item__input" id="gender__radio-1" name="checkbox1" type="checkbox">
+							<label class="item__label" for="gender__radio-1">Male</label>
+
+							<input class="item__input" id="gender__radio-2" name="checkbox2" type="checkbox">
+							<label class="item__label" for="gender__radio-2">Female</label>
+						</li>
+
+						<li class="form__list-item">
+							<p class="item__title">Eye color:</p>
+
+							<input class="item__input" id="color__radio-1" name="checkbox3" type="checkbox">
+							<label class="item__label" for="color__radio-1">
+							Black</label>
+
+							<input class="item__input" id="color__radio-2" name="checkbox4" type="checkbox">
+							<label class="item__label" for="color__radio-2">
+							Blue</label>
+
+							<input class="item__input" id="color__radio-3" name="checkbox5" type="checkbox">
+							<label class="item__label" for="color__radio-3">
+							Brown</label>
+
+							<input class="item__input" id="color__radio-4" name="checkbox6" type="checkbox">
+							<label class="item__label" for="color__radio-4">
+							Red</label>
+
+							<input class="item__input" id="color__radio-5" name="checkbox7" type="checkbox">
+							<label class="item__label" for="color__radio-5">
+							Yellow</label>
+						</li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="cards__wrapper">
+				<form class="cards__form">
+					<button class="cards__form-btn" type="submit">
+						<i class="fas fa-search"></i>
+					</button>
+					<input class="cards__form-input" type="text" placeholder="Type name">
+				</form>
+
+				<div class="cards__items" id="cards-container"></div>
+
+				<div class="cards__button">
+					<button class="button__prev btn disabled">PREV</button>
+					<span class="button__number">1 of 9</span>
+					<button class="button__next btn">NEXT</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
